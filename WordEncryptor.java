@@ -5,17 +5,17 @@ import java.io.IOException;
 public class WordEncryptor {
 
     // Encryption algorithm
-    public static String encryptWord(String word) {
-        int kt_length = word.length();
+    public static String encryptWord(String kt_word) {
+        int kt_length = kt_word.length();
         if (kt_length % 2 == 0) {
             int kt_n = kt_length / 2;
-            String kt_firstHalf = word.substring(0, kt_n);
-            String kt_secondHalf = word.substring(kt_n);
+            String kt_firstHalf = kt_word.substring(0, kt_n);
+            String kt_secondHalf = kt_word.substring(kt_n);
             return kt_secondHalf + kt_firstHalf;
         } else {
             int kt_n = (kt_length + 1) / 2;
-            String kt_firstHalf = word.substring(0, kt_n);
-            String kt_secondHalf = word.substring(kt_n);
+            String kt_firstHalf = kt_word.substring(0, kt_n);
+            String kt_secondHalf = kt_word.substring(kt_n);
             return kt_secondHalf + kt_firstHalf;
         }
     }
